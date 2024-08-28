@@ -8,7 +8,8 @@ Architecture:
 3. Show the total number of words and build a word cloud
 4. Total number of media shared and link shared w.r.t overall members or individual member
 5. Show monthly,daily and weekly message analysis
-6. Emoji analysis    
+6. Emoji analysis
+7. Sentiment Analysis
 
 
 
