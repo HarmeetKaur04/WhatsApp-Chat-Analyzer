@@ -125,5 +125,23 @@ if uploaded_file is not None:
             fig, ax = plt.subplots()
             ax.pie(emoji_df[1], labels=emoji_df[0], autopct="%0.2f")
             st.pyplot(fig)
+    analyzed_data = helper.analyze_sentiments(selected_user,df)
+    st.title("Sentiment Analysis and Visualization")
+    
+    sentiments = [result['label'] for _, result in analyzed_data]
+    sentiment_counts = {label: sentiments.count(label) for label in set(sentiments)}
+
+    # Visualization with Matplotlib
+    st.subheader("Sentiment Distribution")
+
+    fig, ax = plt.subplots()
+    ax.bar(sentiment_counts.keys(), sentiment_counts.values(), color=['green', 'red', 'blue'])
+    ax.set_title("Sentiment Distribution")
+    ax.set_xlabel("Sentiment")
+    ax.set_ylabel("Number of Messages")
+
+    st.pyplot(fig)
+
+
 
 
