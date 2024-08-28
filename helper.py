@@ -4,6 +4,7 @@ from wordcloud import WordCloud
 from collections import Counter
 import pandas as pd
 import emoji
+from transformers import pipeline
 def fetch_stats(selected_user,df):
 
     if selected_user!="Overall":
@@ -115,6 +116,21 @@ def activity_heatmap(selected_user,df):
     user_heatmap = df.pivot_table(index='day_name', columns='period', values='message', aggfunc='count').fillna(0)
 
     return user_heatmap
+    
+def analyze_sentiments(selected_user,df):
+    if selected_user != 'Overall':
+        df=df[df['users']==selected_user]
+    temp = df[df['users'] != 'group_notification']
+    temp = temp[temp['message'] != '<Media omitted>\n']
+    temp = temp[temp['message'] != 'Missed video call\n']
+    temp = temp[temp['message'] != 'Missed voice call\n']
+
+    messages = temp['message'].tolist()
+
+    sentiment_analyzer = pipeline('sentiment-analysis', model='nlptown/bert-base-multilingual-uncased-sentiment')
+
+    sentiment_results = sentiment_analyzer(messages)
+    return list(zip(messages, sentiment_results))
 
 
 
