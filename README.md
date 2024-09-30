@@ -2,17 +2,17 @@
 ## Overview
 WhatsApp Chat Analyzer is a Python-based tool that leverages Natural Language Processing (NLP) and data analysis techniques to extract valuable insights from WhatsApp conversation data. The tool provides in-depth analysis on:
 <br>
-#### Message Frequency: The number of messages sent over time.
-<br>
+#### Message Frequency: 
+The number of messages sent over time.
 
-#### Participant Activity: The activity level of each participant in the conversation.
-<br>
+#### Participant Activity: 
+The activity level of each participant in the conversation.
 
-#### Peak Conversation Times: Identifying the times during which participants are most active.
-<br>
+#### Peak Conversation Times: 
+Identifying the times during which participants are most active.
 
-#### Sentiment Analysis: Assessing the sentiment (positive, negative, neutral) of messages exchanged.
-<br>
+#### Sentiment Analysis:
+Assessing the sentiment (positive, negative, neutral) of messages exchanged.
 
 This project provides a powerful way to uncover group dynamics, communication patterns, and behavioral trends within a WhatsApp group chat.
 <br>
@@ -48,7 +48,7 @@ This project requires the following Python libraries:
 ## Usage
 Export your WhatsApp chat by following these steps:
 
-1. Open the WhatsApp conversation you want to analyze.<br>
+1.Open the WhatsApp conversation you want to analyze.<br>
 2.Tap the Menu (three dots) > More > Export Chat.<br>
 3.Choose to export Without Media.<br>
 4.Save the .txt file to your machine.<br>
