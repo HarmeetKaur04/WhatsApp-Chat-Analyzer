@@ -37,11 +37,23 @@ The tool generates charts and graphs to present insights visually.
 This project requires the following Python libraries:
 <br>
 <br>
-1.pandas
-2.matplotlib
-3.seaborn
-4.nltk
-5.scikit-learn
+1.pandas<br>
+2.matplotlib<br>
+3.seaborn<br>
+4.nltk<br>
+5.scikit-learn<br>
+
+
+
+## Usage
+Export your WhatsApp chat by following these steps:
+
+1. Open the WhatsApp conversation you want to analyze.<br>
+2.Tap the Menu (three dots) > More > Export Chat.<br>
+3.Choose to export Without Media.<br>
+4.Save the .txt file to your machine.<br>
+5.Place the exported .txt file in the project folder.<br>
+6.Results will be generated and displayed in a combination of terminal output and graphical visualizations (e.g., message frequency plots, sentiment analysis charts).<br>
 
 ## Contributing
 <br>
